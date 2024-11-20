@@ -1,0 +1,196 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #000000, #024571);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+  }
+  
+  .container {
+    background: #0084a5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Cabeçalho */
+  header h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  /* Entrada de tarefa */
+  .task-input {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+  }
+  
+  #addTaskButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  #addTaskButton:hover {
+    background-color: #003166;
+  }
+  
+  /* Lista de tarefas */
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-list li {
+    background: #ffffff;
+    border: 1px solid #4c4c4c;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-list .task-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+
+  /* Tarefa concluída - estilo verde */
+.task-list li.completed {
+    background-color: #000000;  /* Cor verde */
+    color: white;
+    text-decoration: line-through;
+  }
+  
+  .task-list li.completed .task-text {
+    color: rgb(255, 255, 255); /* A cor do texto fica branca quando concluída */
+  }
+  
+  /* Estilo do texto "Completado" */
+  .task-list li.completed .completed-text {
+    background-color: #003b0d;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+
+  /* Estilo para a confirmação de exclusão */
+.confirmation-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .confirmation-buttons button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .confirmation-buttons button.confirm-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .confirmation-buttons button.confirm-btn:hover {
+    background-color: #218838;
+  }
+  
+  .confirmation-buttons button.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .confirmation-buttons button.cancel-btn:hover {
+    background-color: #c82333;
+  }
+
+  
+  /* Quando a tarefa for marcada como concluída, o risco deve sumir no botão "Desmarcar" */
+.task-list li.completed .complete-btn {
+    display: none;
+  }
+  
+  .task-list li.completed .undo-btn {
+    display: inline-block;
+  }
+  
+
+  
+  /* Botões */
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  button.complete-btn {
+    background: #009723;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  button.complete-btn:hover {
+    background: #007018;
+  }
+  
+  button.delete-btn {
+    background: #f90019;
+    color: white;
+  }
+  
+  button.delete-btn:hover {
+    background: #c82333;
+  }
+  
+  /* Rodapé */
+  footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+  
